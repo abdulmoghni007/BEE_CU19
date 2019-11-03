@@ -1,0 +1,44 @@
+boolean val= 0;
+boolean wal= 0;
+
+void setup()
+{
+  pinMode(4,OUTPUT);
+  pinMode(8,INPUT);
+  pinMode(11,INPUT);
+  pinMode(12,OUTPUT);
+}
+
+void loop()
+{
+  
+  val = digitalRead(11);
+  wal = digitalRead(8);
+  if(val==HIGH)
+  {
+    digitalWrite(4,HIGH);
+   delay(40);
+   digitalWrite(4,LOW);
+   delay(40);
+  }
+  else
+  {
+    digitalWrite(4,LOW);
+  }
+  
+  
+  if(wal==HIGH)
+  {digitalWrite(12,HIGH);
+   delay(20);
+   digitalWrite(12,LOW);
+   delay(20);
+    
+  }
+  else
+  {
+    digitalWrite(12,LOW);
+  }
+  
+  
+   
+}
